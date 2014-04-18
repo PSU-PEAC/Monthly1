@@ -12885,6 +12885,8 @@ grid 5.08 mm</description>
 <part name="H1" library="holes" deviceset="MOUNT-PAD-ROUND" device="2.8"/>
 <part name="H2" library="holes" deviceset="MOUNT-PAD-ROUND" device="2.8"/>
 <part name="GND8" library="PEAC" deviceset="GND" device=""/>
+<part name="JP3" library="pinhead" deviceset="PINHD-1X2" device=""/>
+<part name="GND9" library="PEAC" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -12928,6 +12930,8 @@ grid 5.08 mm</description>
 <instance part="H1" gate="G$1" x="312.42" y="114.3"/>
 <instance part="H2" gate="G$1" x="312.42" y="106.68"/>
 <instance part="GND8" gate="1" x="304.8" y="96.52"/>
+<instance part="JP3" gate="G$1" x="195.58" y="91.44" rot="R180"/>
+<instance part="GND9" gate="1" x="205.74" y="63.5" rot="MR0"/>
 </instances>
 <busses>
 </busses>
@@ -12980,6 +12984,12 @@ grid 5.08 mm</description>
 <wire x1="304.8" y1="106.68" x2="304.8" y2="99.06" width="0.1524" layer="91"/>
 <wire x1="309.88" y1="106.68" x2="304.8" y2="106.68" width="0.1524" layer="91"/>
 <junction x="304.8" y="106.68"/>
+</segment>
+<segment>
+<pinref part="JP3" gate="G$1" pin="1"/>
+<wire x1="198.12" y1="88.9" x2="205.74" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="205.74" y1="88.9" x2="205.74" y2="66.04" width="0.1524" layer="91"/>
+<pinref part="GND9" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -13166,8 +13176,14 @@ grid 5.08 mm</description>
 <net name="VCC-" class="0">
 <segment>
 <pinref part="OPAMP1" gate="G$1" pin="VCC-@4"/>
-<wire x1="228.6" y1="104.14" x2="228.6" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="228.6" y1="104.14" x2="228.6" y2="96.52" width="0.1524" layer="91"/>
 <pinref part="R9" gate="G$1" pin="2"/>
+<wire x1="228.6" y1="96.52" x2="228.6" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="228.6" y1="96.52" x2="223.52" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="223.52" y1="96.52" x2="223.52" y2="91.44" width="0.1524" layer="91"/>
+<junction x="228.6" y="96.52"/>
+<pinref part="JP3" gate="G$1" pin="2"/>
+<wire x1="223.52" y1="91.44" x2="198.12" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
